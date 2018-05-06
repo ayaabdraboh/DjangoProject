@@ -1,0 +1,29 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(71, 44, 12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #dbd7b1f6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: rgba(161, 125, 90, 0.404);
+    color: rgb(252, 241, 241);
+  }

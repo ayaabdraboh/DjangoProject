@@ -1,0 +1,48 @@
+body{
+
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: 1324px 700px;
+    
+    }
+    .login {
+        position: relative;
+        margin-top: 170px;
+        margin-left: 100px;
+        padding: 20px 20px 20px;
+        width: 310px;
+        background: rgba(163, 156, 129, 0.911);
+        border-radius: 3px;
+        opacity: .9;
+        text-align: center;
+        color: rgb(43, 26, 5);
+        border-radius: 10px; 
+        
+    
+    }
+    a{
+        text-decoration: none;
+    }
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color:#dbd7b1f6;
+        border-radius: 5px;
+    }
+    
+    #btn{
+    
+        background-color:#462e19f6;
+        color: aliceblue;
+    }
+    
+    #btn:hover{
+    
+        background-color:#997f69f6;
+        color: aliceblue;
+    }

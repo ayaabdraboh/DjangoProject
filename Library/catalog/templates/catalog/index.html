@@ -1,0 +1,68 @@
+<style>
+   body{
+  
+  background-image: url("../../static/index2.jpg");
+  background-repeat: no-repeat;
+  background-size: 1324px 700px;
+  
+  }
+  #continer{
+    margin-top: 5%;
+    margin-left:15%; 
+    border-style: solid;
+    border-color: rgb(117, 89, 53);
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(65, 43, 11)
+  }
+  #name{
+    font-family: "Times New Roman", Georgia, serif; 
+    font-weight: bold;
+    margin-top: 10%;
+    margin-left:15%; 
+    width: 500px;
+    text-align: center;
+    color: rgb(83, 57, 17);
+  }
+  
+  #foter{
+    width: 100%;
+    border-top: 2px solid  rgb(83, 57, 17);
+    float: inherit;
+    margin-top: 16%; 
+    margin-left: -120px;
+    padding: 20px;
+  }
+  img{
+    margin-left: 20%;
+  }
+</style>
+{% extends 'base-generic.html' %}
+{% block content %}
+<div class="navbar" id="topbar">
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'writers' %}">All Authors</a>
+  <a href="{% url 'books' %}">All Books</a>
+  <a href="{% url 'login' %}">Logout</a>
+</div>
+
+<div id="name">
+  <h1>Welcome {{ user.username }}</h1>
+</div>
+  <div id="continer">
+<h2>Content</h2>
+
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    
+  </ul>
+</div>
+<div id="foter">
+<img src="../../static/face.png" height="50" width="50" >
+<img src="../../static/link.png" height="50" width="50" >
+<img src="../../static/tw.png" height="50" width="50" >
+</div>
+{% endblock %}
+

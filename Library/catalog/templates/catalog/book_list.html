@@ -1,0 +1,71 @@
+<style>
+  body{
+ 
+ background-image: url("../../static/index2.jpg");
+ background-repeat: no-repeat;
+ background-size: 1324px 700px;
+ 
+ }
+ #continer{
+   margin-top: 5%;
+   margin-left:15%; 
+   border-style: solid;
+   border-color: rgb(117, 89, 53);
+   width: 500px;
+   text-align: center;
+   border-radius: 10px;
+   color: rgb(65, 43, 11)
+ }
+ #name{
+   font-family: "Times New Roman", Georgia, serif; 
+   font-weight: bold;
+   margin-top: 10%;
+   margin-left:15%; 
+   width: 500px;
+   text-align: center;
+   color: rgb(83, 57, 17);
+ }
+ 
+ #foter{
+   width: 100%;
+   border-top: 2px solid  rgb(83, 57, 17);
+   float: inherit;
+   margin-top: 16%; 
+   margin-left: -120px;
+   padding: 20px;
+ }
+ img{
+   margin-left: 20%;
+ }
+ #autherlist{
+   color: rgb(83, 57, 17);
+  margin-top: 15%;
+ }
+</style>
+{% extends "base-generic.html" %}
+
+{% block content %}
+<div class="navbar" id="topbar">
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'writers' %}">All Authors</a>
+  <a href="{% url 'books' %}">All Books</a>
+  <a href="{% url 'login' %}">Logout</a>
+</div>
+<div id="autherlist">
+    <h1>Book List</h1>
+
+    {% if book_list %}
+    <ul>
+
+      {% for book in book_list %}
+      <li>
+        <a href="{{book.get_absolute_url }}">{{ book.title }}</a> <br>{{book.author}}
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no books in the library.</p>
+      </div>
+    {% endif %}
+{% endblock %}

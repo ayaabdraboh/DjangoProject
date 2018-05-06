@@ -1,0 +1,44 @@
+<style>
+    body{
+  
+  background-image: url("../../static/back.jpg");
+  background-repeat: no-repeat;
+  background-size: 1324px 700px;
+  
+  }
+  </style>
+
+
+
+{% extends 'base-generic.html' %}
+
+{% block content %}
+<div class="navbar" id="topbar">
+  
+  <a href="{% url 'signup' %}">Register</a>
+  <a href="{% url 'login' %}">Login</a>
+
+</div>
+<div class="register">
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+
+      <p>
+        {{ field.label_tag }}<br>
+        
+        {{ field }}
+        
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+
+      </p>
+    {% endfor %}
+  
+    <p class="submit"><input type="submit" name="commit" value="Register" id="btn"></p>
+
+  </form>
+  </div>
+{% endblock %}
+
